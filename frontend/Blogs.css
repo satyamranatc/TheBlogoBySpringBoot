@@ -1,0 +1,114 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body
+{
+    background-color:black;
+    color:white;
+    font-family:sans-serif;
+}
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .75rem 1.2rem;
+    background-color: #171616;
+    color: white;
+    height: 60px;
+}
+
+nav ul
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+main{
+    min-height: calc(100vh - 60px);
+    background-image: linear-gradient(black, #243232);
+    display: flex;
+    flex-direction: column;
+
+}
+
+#Header
+{
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+
+#BlogsContainer
+{
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    padding: .5rem;
+
+}
+
+.BlogCard
+{
+    height: 450px;
+    min-width: 300px;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 11px;
+    background-image: linear-gradient(black, #243232);
+    border: 1px solid white;
+}
+
+.BlogCard img
+{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.BlogCard h2
+{
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+
+.BlogCard h4
+{
+    margin-top: .5rem;
+    margin-left: .5rem;
+    font-weight: 100;
+}
+.BlogCard p
+{
+    margin-top: .5rem;
+    margin-left: .5rem;
+
+    color: lightgrey;
+}
+
+.BlogCard button
+{
+    margin-top: .5rem;
+    margin-left: .5rem;
+    padding: .5rem 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 11px;
+}
