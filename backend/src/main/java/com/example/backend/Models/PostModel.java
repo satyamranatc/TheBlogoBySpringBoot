@@ -9,13 +9,15 @@ public class PostModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String blogPoster;
     private String blogTitle;
     private String blogDesc;
     private String blogAuthor;
 
     public PostModel() {}
 
-    public PostModel(String blogTitle, String blogDesc, String blogAuthor) {
+    public PostModel(String blogPoster,String blogTitle, String blogDesc, String blogAuthor) {
+        this.blogPoster = blogPoster;
         this.blogTitle = blogTitle;
         this.blogDesc = blogDesc;
         this.blogAuthor = blogAuthor;
@@ -23,6 +25,14 @@ public class PostModel {
 
     public Long getId() {
         return id;
+    }
+
+    public String getBlogPoster() {
+        return blogPoster;
+    }
+
+    public void setBlogPoster(String blogPoster) {
+        this.blogPoster = blogPoster;
     }
 
     public String getBlogTitle() {

@@ -14,11 +14,11 @@ function DisplayData(data) {
   for (let i of data) {
     BlogsContainer.innerHTML += `
         <div class="BlogCard">
-            <img src="https://wallpapercave.com/wp/wp2570196.jpg">
+            <img src="${i.blogPoster}">
             <h2>${i.blogTitle}</h2>
             <h4>${i.blogDesc}</h4>
             <p>${i.blogAuthor}</p>
-            <button>Read More</button>
+            <button><a href="./BlogDetails.html?id=${i.id}">Read More</a></button>
         </div>
     `;
   }
