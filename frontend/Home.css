@@ -17,24 +17,51 @@ a
 }
 
 
-nav
-{
+/* Navigation Bar */
+nav {
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 1.2rem 2.5rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: .75rem 1.2rem;
-    background-color: #171616;
-    color: white;
-    height: 60px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-nav ul
-{
-    list-style: none;
+nav h2 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 10px;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    color: #e0e0e0;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+nav ul li:hover,
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
 }
 
 main{

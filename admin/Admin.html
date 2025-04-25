@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blgo Admin</title>
     <link rel="stylesheet" href="./Admin.css">
+    <title>Blog Admin</title>
 </head>
 <body>
-
     <nav>
         <h2>The Spring Boot Blog</h2>
         <ul>
@@ -17,26 +16,33 @@
     </nav>
 
     <main>
-
-        <form id = "BlogForm">
-            <input type="poster" placeholder="Blog Poster Link:">
-            <input type="text" placeholder="Blog Title:">
-            <textarea rows="10" cols="40"  placeholder="Blog Desc:"></textarea>
-            <input type="text" placeholder="Blog Author" >
-            <button>Add Blog</button>
+        <form id="BlogForm">
+            <input type="url" placeholder="Blog Poster Link:" name="blogPoster">
+            <input type="text" placeholder="Blog Title:" name="blogTitle">
+            <textarea rows="10" cols="40" placeholder="Blog Desc:" name="blogDesc"></textarea>
+            <input type="text" placeholder="Blog Author" name="blogAuthor">
+            <button id="FormBtn" type="submit">Add Blog</button>
         </form>
 
         <hr>
-        <section id = "BlogsContainer">
-
-            <!-- Content bY js -->
-   
-        </section>
-
-        
+        <div class="table-container">
+            <table id="BlogsTable">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="BlogsContainer">
+                    <!-- Content by JS -->
+                </tbody>
+            </table>
+        </div>
     </main>
     
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./Admin.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="./Admin.js"></script>
 </html>
