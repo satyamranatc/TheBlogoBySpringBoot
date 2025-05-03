@@ -50,7 +50,7 @@ public class BlogController {
 
         existingPost.setBlogTitle(newPost.getBlogTitle());
         existingPost.setBlogDesc(newPost.getBlogDesc());
-        existingPost.setBlogAuthor(newPost.getBlogAuthor());
+
 
         postRepo.save(existingPost);
         return "Post Updated Successfully";

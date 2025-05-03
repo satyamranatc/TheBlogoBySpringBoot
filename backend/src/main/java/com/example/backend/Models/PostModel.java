@@ -1,6 +1,7 @@
 package com.example.backend.Models;
 
 import jakarta.persistence.*;
+import com.example.backend.Models.UserModel;
 
 @Entity
 public class PostModel {
@@ -12,16 +13,23 @@ public class PostModel {
     private String blogPoster;
     private String blogTitle;
     private String blogDesc;
-    private String blogAuthor;
+
+    // 👇 This is now the author (User is the author)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id") 
+    
+    private UserModel user;
 
     public PostModel() {}
 
-    public PostModel(String blogPoster,String blogTitle, String blogDesc, String blogAuthor) {
+    public PostModel(String blogPoster, String blogTitle, String blogDesc, UserModel user) {
         this.blogPoster = blogPoster;
         this.blogTitle = blogTitle;
         this.blogDesc = blogDesc;
-        this.blogAuthor = blogAuthor;
+        this.user = user;
     }
+
+    // Getters and setters
 
     public Long getId() {
         return id;
@@ -51,11 +59,11 @@ public class PostModel {
         this.blogDesc = blogDesc;
     }
 
-    public String getBlogAuthor() {
-        return blogAuthor;
+    public UserModel getUser() {
+        return user;
     }
 
-    public void setBlogAuthor(String blogAuthor) {
-        this.blogAuthor = blogAuthor;
+    public void setUser(UserModel user) {
+        this.user = user;
     }
 }

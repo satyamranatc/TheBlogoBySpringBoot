@@ -17,7 +17,8 @@ function DisplayData(data) {
             <img src="${i.blogPoster}">
             <h2>${i.blogTitle}</h2>
             <h4>${i.blogDesc}</h4>
-            <p>${i.blogAuthor}</p>
+            <p>${i.user?i.user.userName:null}</p>
+            <img src = ${i.user?i.user.userProfile:null}>
             <button><a href="./BlogDetails.html?id=${i.id}">Read More</a></button>
         </div>
     `;
